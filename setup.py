@@ -2,21 +2,18 @@ from setuptools import setup, find_packages
 
 longdesc = \
 '''
-An addon for Tendenci for displaying embedded videos.
-
-Supports Vimeo and YouTube embeds. Includes drag-n-drop reordering
-in the Django admin area.
+An addon for Tendenci for displaying Case Studies
 '''
 
 setup(
-    name='tendenci-videos',
+    name='tendenci-case-studies',
     author='Schipul',
     author_email='programmers@schipul.com',
-    version='1.0.4',
+    version='1.0.0',
     license='GPL3',
-    description='Videos addon for Tendenci',
+    description='Case Studies addon for Tendenci',
     long_description=longdesc,
-    url='https://github.com/tendenci/tendenci-videos',
+    url='https://github.com/tendenci/tendenci-case-studies',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',

@@ -9,6 +9,8 @@ from tendenci.core.perms.models import TendenciBaseModel
 from case_studies.managers import CaseStudyManager
 
 from tendenci.core.files.models import File
+from tendenci.core.files.managers import FileManager
+
 
 class CaseStudy(TendenciBaseModel):
     client = models.CharField(max_length=75)
@@ -115,6 +117,8 @@ class Image(File):
         default='other',
     )
     position = models.IntegerField(blank=True)
+
+    objects = FileManager()
 
     def save(self, *args, **kwargs):
         if self.position is None:

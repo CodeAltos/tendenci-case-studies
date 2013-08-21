@@ -5,7 +5,7 @@ from django.utils.html import strip_tags
 from django.conf import settings
 
 from tendenci.core.perms.admin import TendenciBaseModelAdmin
-from case_studies.models import CaseStudy, Service, Technology, Image
+from case_studies.models import CaseStudy, Image
 from case_studies.forms import CaseStudyForm, FileForm
 
 
@@ -34,11 +34,8 @@ class CaseStudyAdmin(TendenciBaseModelAdmin):
         (None, {'fields': (
             'client',
             'slug',
-            'url',
             'overview',
             'execution',
-            'services',
-            'technologies',
             'results',
             'tags'
         )}),
@@ -87,6 +84,4 @@ class CaseStudyAdmin(TendenciBaseModelAdmin):
         formset.save()
 
 admin.site.register(CaseStudy, CaseStudyAdmin)
-admin.site.register(Service)
-admin.site.register(Technology)
 admin.site.register(Image)

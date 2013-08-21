@@ -39,11 +39,8 @@ class CaseStudyForm(TendenciBaseForm):
         fields = (
             'client',
             'slug',
-            'url',
             'overview',
             'execution',
-            'services',
-            'technologies',
             'results',
             'tags',
             'allow_anonymous_view',

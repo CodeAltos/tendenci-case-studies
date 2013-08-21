@@ -7,8 +7,7 @@
 {% load forms_tags %}
 
 {% block title %}
-        {{ case_study.client }} - {% for tech in case_study.technologies.all %}
-                {% if forloop.first %}{{ tech.title }}{% endif %} {% endfor %} Case Study
+        {{ case_study.client }} - Case Study
 {% endblock %}
 
 {% block meta_keywords %}
@@ -54,26 +53,8 @@
                 </div>
                 {% endif %}
                 {% endfor %}
-              <h3>Services</h3>
-                <div class="pad">
-                <ul>
-                {% for service in case_study.services.all %}
-                <li><a href="{% url case_study.search %}?q={{ service.title }}">{{ service.title }}</a></li>
-                {% endfor %}
-                </ul>
-                </div>
             {% endspaceless %}
                 
-            {% spaceless %}
-              <h3>Technology</h3>
-                <div class="pad">
-                <ul>
-                {% for tech in case_study.technologies.all %}
-                <li><a href="{% url case_study.search %}?q={{ tech.title }}">{{ tech.title }}</a></li>
-                {% endfor %}
-                </ul>
-                </div>
-            {% endspaceless %}
                 <a id="case-study-view-site" href="{{ case_study.url }}">View this Website &rarr;</a>
             </div>
             

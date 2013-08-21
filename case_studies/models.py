@@ -16,13 +16,10 @@ class CaseStudy(TendenciBaseModel):
     client = models.CharField(max_length=75)
     website = models.URLField(max_length=150)
     slug = models.SlugField(max_length=100)
-    url = models.URLField()
     overview = models.TextField(blank=True, null=True)
     execution = models.TextField(blank=True, null=True)
     results = models.TextField(blank=True, null=True)
     tags = TagField(blank=True, help_text=_('Tags separated by commas. E.g Tag1, Tag2, Tag3'))
-    services = models.ManyToManyField('Service')
-    technologies = models.ManyToManyField('Technology')
     
     perms = generic.GenericRelation(ObjectPermission,
                                           object_id_field="object_id",

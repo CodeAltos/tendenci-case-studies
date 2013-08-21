@@ -55,23 +55,10 @@
                   </div>
                   {% endif %}
                   {% endfor %}
-                <h2>Services</h2>
-                  <ul>
-                  {% for service in case_study.services.all %}
-                  <li>{{ service.title }}</li>
-                  {% endfor %}
-                  </ul>
-
-                <h2>Technology</h2>
-                  <ul>
-                  {% for tech in case_study.technologies.all %}
-                  <li>{{ tech.title }}</li>
-                  {% endfor %}
-                  </ul>
               <h2>URL</h2>
                   {{ case_study.url }}
               </div>
-              
+
               {% if case_study.overview %}
                   <h2>Overview</h2>
                   <p>{{ case_study.overview|safe }}</p>

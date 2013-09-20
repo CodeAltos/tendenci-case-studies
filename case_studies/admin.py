@@ -46,8 +46,7 @@ class CaseStudyAdmin(TendenciBaseModelAdmin):
             'group_perms',
         )}),
         ('Publishing Status', {'fields': (
-            'status',
-            'status_detail'
+            'status_detail',
         )}),
     )
     form = CaseStudyForm

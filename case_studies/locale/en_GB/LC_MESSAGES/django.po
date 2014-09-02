@@ -31,19 +31,19 @@ msgstr ""
 
 #: templates/case_studies/meta.html:40
 msgid "Eventlogs"
-msgstr ""
+msgstr "Eventlogs"
 
 #: templates/case_studies/meta.html:41
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: templates/case_studies/meta.html:42
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: templates/case_studies/meta.html:46
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: templates/case_studies/print-view.html:36
 msgid "Case Study Print View"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: templates/case_studies/admin/change_form.html:21
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: templates/case_studies/admin/change_form.html:28
 msgid "History"

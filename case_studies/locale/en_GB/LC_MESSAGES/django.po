@@ -19,7 +19,7 @@ msgstr ""
 
 #: models.py:22
 msgid "Tags separated by commas. E.g Tag1, Tag2, Tag3"
-msgstr ""
+msgstr "Tags separated by commas. E.g Tag1, Tag2, Tag3"
 
 #: models.py:106
 msgid "File type"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: templates/case_studies/meta.html:25
 msgid "Share"
-msgstr ""
+msgstr "Share"
 
 #: templates/case_studies/meta.html:40
 msgid "Eventlogs"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: models.py:22
 msgid "Tags separated by commas. E.g Tag1, Tag2, Tag3"
-msgstr ""
+msgstr "Etiquetas separados por comas. Por ejemplo, tag1, tag2, tag3"
 
 #: models.py:106
 msgid "File type"

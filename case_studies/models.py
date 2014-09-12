@@ -3,13 +3,13 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes import generic
 
-from tendenci.core.perms.object_perms import ObjectPermission
+from tendenci.apps.perms.object_perms import ObjectPermission
 from tagging.fields import TagField
-from tendenci.core.perms.models import TendenciBaseModel
+from tendenci.apps.perms.models import TendenciBaseModel
 from case_studies.managers import CaseStudyManager
 
-from tendenci.core.files.models import File
-from tendenci.core.files.managers import FileManager
+from tendenci.apps.files.models import File
+from tendenci.apps.files.managers import FileManager
 
 
 class CaseStudy(TendenciBaseModel):

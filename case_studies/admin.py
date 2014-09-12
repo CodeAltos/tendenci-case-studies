@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.contrib.contenttypes.models import ContentType
-from django.utils.text import truncate_words
+from tendenci.apps.base.utils import truncate_words
 from django.utils.html import strip_tags
 from django.conf import settings
 
-from tendenci.core.perms.admin import TendenciBaseModelAdmin
+from tendenci.apps.perms.admin import TendenciBaseModelAdmin
 from case_studies.models import CaseStudy, Image
 from case_studies.forms import CaseStudyForm, FileForm
 

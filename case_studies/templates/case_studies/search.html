@@ -10,7 +10,7 @@
 {{ block.super }}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/casestudy.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/casestudy-search.css">
-<link rel="alternate" type="application/rss+xml" title="Latest Case Studies" href="{% url case_study.feed %}" />
+<link rel="alternate" type="application/rss+xml" title="Latest Case Studies" href="{% url "case_study.feed" %}" />
 {% endblock %}
 
 {% block body %}
@@ -21,7 +21,7 @@
     <h1>Case Studies Search</h1>
     {% case_study_search %}
     {% if can_add_case_study %}
-    <div class="clearfix"><a id="add-case-study" href="{% url admin:case_studies_casestudy_add %}">Add Case Study &raquo;</a></div>
+    <div class="clearfix"><a id="add-case-study" href="{% url "admin:case_studies_casestudy_add" %}">Add Case Study &raquo;</a></div>
     {% endif %}
     <div class="cs-search-wrap clearfix">
         {% for case_study in case_studies %}
@@ -31,7 +31,7 @@
             <div class="cs-item">
                 {% for img in case_study.featured_screenshots %}
                         {% if forloop.first %}
-                    <a class="cs-img-link" href="{{ case_study.get_absolute_url }}"><img alt="{{ case_study.client }}" src="{% url file img.pk %}180x130" /></a>
+                    <a class="cs-img-link" href="{{ case_study.get_absolute_url }}"><img alt="{{ case_study.client }}" src="{% url "file" img.pk %}180x130" /></a>
                     {% endif %}
                 {% endfor %}
                 <h3><a href="{{ case_study.get_absolute_url }}" title="{{ case_study.client }}">{{ case_study.client }}</a></h3>

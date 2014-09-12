@@ -3,10 +3,10 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.core.urlresolvers import reverse
 
-from tendenci.core.base.http import Http403
-from tendenci.core.perms.utils import has_perm, has_view_perm, get_query_filters
-from tendenci.core.event_logs.models import EventLog
-from tendenci.core.site_settings.utils import get_setting
+from tendenci.apps.base.http import Http403
+from tendenci.apps.perms.utils import has_perm, has_view_perm, get_query_filters
+from tendenci.apps.event_logs.models import EventLog
+from tendenci.apps.site_settings.utils import get_setting
 
 from case_studies.models import CaseStudy, Service, Technology
 def detail(request, slug=None, template_name="case_studies/view.html"):

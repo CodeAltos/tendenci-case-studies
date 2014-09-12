@@ -49,7 +49,7 @@
               {% for img in case_study.featured_screenshots %}
                 {% if forloop.first %}
                 <div id="featured-screenshot">
-                    <a rel="cs-photos" title="{{ img.description }}" href="{% url file img.pk %}?.jpg"><img alt="{{ img.description }}" height="156" width="200" src="{% url file img.pk %}{{ forloop.counter|add:"200" }}x{{ forloop.counter|add:"156" }}/" /></a>
+                    <a rel="cs-photos" title="{{ img.description }}" href="{% url "file" img.pk %}?.jpg"><img alt="{{ img.description }}" height="156" width="200" src="{% url "file" img.pk %}{{ forloop.counter|add:"200" }}x{{ forloop.counter|add:"156" }}/" /></a>
                 </div>
                 {% endif %}
                 {% endfor %}
@@ -76,20 +76,20 @@
         <h2>Screenshots</h2>
         <div id="cs-photos" class="clearfix">
             {% for img in case_study.screenshots %}
-            <a rel="cs-photos" title="{{ img.description }}" href="{% url file img.pk %}?.jpg"><img alt="{{ img.description }}" height="210" width="270" src="{% url file img.pk %}{{ forloop.counter|add:"270" }}x{{ forloop.counter|add:"210" }}/" /></a>
+            <a rel="cs-photos" title="{{ img.description }}" href="{% url "file" img.pk %}?.jpg"><img alt="{{ img.description }}" height="210" width="270" src="{% url "file" img.pk %}{{ forloop.counter|add:"270" }}x{{ forloop.counter|add:"210" }}/" /></a>
             {% endfor %}
         </div>
         {% if tags %}
       <div class="tags">
           Tags: 
           {% for tag in tags %}
-            <a href="{% url case_study %}?q=tag:{{ tag }}">{{ tag }}</a>
+            <a href="{% url "case_study" %}?q=tag:{{ tag }}">{{ tag }}</a>
           {% endfor %}  
       </div>
       {% endif %}
 
         <div class="case-meta">
-            <a href="{% url case_study %}">&laquo;&nbsp;Search other case studies</a>
+            <a href="{% url "case_study" %}">&laquo;&nbsp;Search other case studies</a>
         </div>
         
     </div>

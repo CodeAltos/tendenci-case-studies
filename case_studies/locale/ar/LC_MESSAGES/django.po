@@ -31,19 +31,19 @@ msgstr ""
 
 #: templates/case_studies/meta.html:40
 msgid "Eventlogs"
-msgstr ""
+msgstr "و eventlogs"
 
 #: templates/case_studies/meta.html:41
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 #: templates/case_studies/meta.html:42
 msgid "Options"
-msgstr ""
+msgstr "خيارات"
 
 #: templates/case_studies/meta.html:46
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: templates/case_studies/print-view.html:36
 msgid "Case Study Print View"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: templates/case_studies/print-view.html:40
 msgid "Your printed page will look <em>something</em> like this."
-msgstr ""
+msgstr "الصفحة المطبوعة سوف ننظر <em> شيئا </em> مثل هذا."
 
 #: templates/case_studies/print-view.html:46
 msgid "Case Study"
@@ -63,19 +63,19 @@ msgstr ""
 
 #: templates/case_studies/admin/change_form.html:18
 msgid "Home"
-msgstr ""
+msgstr "الصفحة الرئيسية"
 
 #: templates/case_studies/admin/change_form.html:21
 msgid "Add"
-msgstr ""
+msgstr "إضافة"
 
 #: templates/case_studies/admin/change_form.html:28
 msgid "History"
-msgstr ""
+msgstr "التاريخ"
 
 #: templates/case_studies/admin/change_form.html:29
 msgid "View on site"
-msgstr ""
+msgstr "عرض في الموقع"
 
 #: templates/case_studies/admin/change_form.html:39
 msgid "Please correct the error below."
@@ -85,4 +85,4 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
-msgstr[5] ""
+msgstr[5] "يرجى تصحيح الأخطاء أدناه."

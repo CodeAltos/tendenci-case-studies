@@ -5,9 +5,10 @@
 {% load case_study_tags %}
 {% load tagging_tags %}
 {% load forms_tags %}
+{% load i18n %}
 
 {% block title %}
-        {{ case_study.client }} - Case Study
+        {{ case_study.client }} - {% trans 'Case Study' %}
 {% endblock %}
 
 {% block meta_keywords %}
@@ -38,13 +39,13 @@
 <div class="t">
     <div class="cs-view">
         <div class="quick-options">{% case_study_options request.user case_study %}</div>
-        
+
         <h1>{{ case_study.client }} Case Study</h1>
-        
+
         <section id="case-study-text" class="clearfix">
-        
+
             <div id="service-tech">
-            
+
             {% spaceless %}
               {% for img in case_study.featured_screenshots %}
                 {% if forloop.first %}
@@ -54,26 +55,26 @@
                 {% endif %}
                 {% endfor %}
             {% endspaceless %}
-                
+
                 <a id="case-study-view-site" href="{{ case_study.url }}">View this Website &rarr;</a>
             </div>
-            
+
             {% if case_study.overview %}
-                <h2>Overview</h2>
+                <h2>{% trans 'Overview' %}</h2>
                 <p>{{ case_study.overview|safe }}</p>
             {% endif %}
             {% if case_study.execution %}
-                <h2>Execution</h2>
+                <h2>{% trans 'Execution' %}</h2>
                 <p>{{ case_study.execution|safe }}</p>
             {% endif %}
             {% if case_study.results %}
-                <h2>Results</h2>
+                <h2>{% trans 'Results' %}</h2>
                 <p>{{ case_study.results|safe }}</p>
             {% endif %}
-      
+
         </section><!-- /case-study-text -->
-        
-        <h2>Screenshots</h2>
+
+        <h2>{% trans 'Screenshots' %}</h2>
         <div id="cs-photos" class="clearfix">
             {% for img in case_study.screenshots %}
             <a rel="cs-photos" title="{{ img.description }}" href="{% url "file" img.pk %}?.jpg"><img alt="{{ img.description }}" height="210" width="270" src="{% url "file" img.pk %}{{ forloop.counter|add:"270" }}x{{ forloop.counter|add:"210" }}/" /></a>
@@ -81,17 +82,17 @@
         </div>
         {% if tags %}
       <div class="tags">
-          Tags: 
+          {% trans 'Tags' %}:
           {% for tag in tags %}
             <a href="{% url "case_study" %}?q=tag:{{ tag }}">{{ tag }}</a>
-          {% endfor %}  
+          {% endfor %}
       </div>
       {% endif %}
 
         <div class="case-meta">
-            <a href="{% url "case_study" %}">&laquo;&nbsp;Search other case studies</a>
+            <a href="{% url "case_study" %}">&laquo;&nbsp;{% trans 'Search other case studies' %}</a>
         </div>
-        
+
     </div>
 </div>
 

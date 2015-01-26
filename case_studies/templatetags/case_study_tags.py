@@ -2,10 +2,17 @@ from django.template import Node, Library, TemplateSyntaxError, Variable
 from django.contrib.auth.models import AnonymousUser
 
 from case_studies.models import CaseStudy
-from tendenci.apps.base.template_tags import ListNode, parse_tag_kwargs
+from tendenci.core.base.template_tags import ListNode, parse_tag_kwargs
 
 register = Library()
 
+@register.inclusion_tag("case_studies/top_nav_items.html", takes_context=True)
+def case_study_current_app(context, user, case_study=None):
+    context.update({
+        "app_object": case_study,
+        "user": user
+    })
+    return context
 
 @register.inclusion_tag("case_studies/options.html", takes_context=True)
 def case_study_options(context, user, case_study):
@@ -35,10 +42,10 @@ def list_case_studies(parser, token):
 
         {% list_case_studies as [varname] [options] %}
 
-    Be sure the [varname] has a specific name like ``case_studies_sidebar`` or 
+    Be sure the [varname] has a specific name like ``case_studies_sidebar`` or
     ``case_studies_list``. Options can be used as [option]=[value]. Wrap text values
     in quotes like ``tags="cool"``. Options include:
-    
+
         ``limit``
            The number of items that are shown. **Default: 3**
         ``order``

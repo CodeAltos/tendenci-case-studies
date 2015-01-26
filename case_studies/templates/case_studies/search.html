@@ -3,8 +3,9 @@
 {% load case_study_tags %}
 {% load perm_tags %}
 {% load base_filters %}
+{% load i18n %}
 
-{% block title %}Case Studies{% endblock %}
+{% block title %}{% trans 'Case Studies' %}{% endblock %}
 
 {% block extra_head %}
 {{ block.super }}
@@ -18,10 +19,10 @@
 {% has_perm user case_studies.add_casestudy as can_add_case_study %}
 
 <div class="t">
-    <h1>Case Studies Search</h1>
+    <h1>{% trans 'Case Studies Search' %}</h1>
     {% case_study_search %}
     {% if can_add_case_study %}
-    <div class="clearfix"><a id="add-case-study" href="{% url "admin:case_studies_casestudy_add" %}">Add Case Study &raquo;</a></div>
+    <div class="clearfix"><a id="add-case-study" href="{% url "admin:case_studies_casestudy_add" %}">{% trans 'Add Case Study' %} &raquo;</a></div>
     {% endif %}
     <div class="cs-search-wrap clearfix">
         {% for case_study in case_studies %}
@@ -37,13 +38,13 @@
                 <h3><a href="{{ case_study.get_absolute_url }}" title="{{ case_study.client }}">{{ case_study.client }}</a></h3>
             </div>
             <div class="cs-full">
-                <p style="margin-top: 6px; border-top: 1px dashed #fff; padding-top: 6px;"><a href="{{ case_study.url }}">View this Website &raquo;</a></p>
+                <p style="margin-top: 6px; border-top: 1px dashed #fff; padding-top: 6px;"><a href="{{ case_study.url }}">{% trans 'View this Website' %} &raquo;</a></p>
             </div>
         </li>
         {% endwith %}
         </ul>
         {% empty %}
-            <p>0 Case Studies Found</p>
+            <p>{% trans '0 Case Studies Found' %}</p>
         {% endfor %}
     </div>
     {% paginate %}

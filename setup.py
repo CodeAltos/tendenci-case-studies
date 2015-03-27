@@ -9,7 +9,7 @@ setup(
     name='tendenci-case-studies',
     author='Schipul',
     author_email='programmers@schipul.com',
-    version='6.0.0',
+    version='6.0.1',
     license='GPL3',
     description='Case Studies addon for Tendenci',
     long_description=longdesc,

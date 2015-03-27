@@ -2,6 +2,7 @@
 # Exclude . files
 *.
 .DS_Store
+.*
 
 # except for .gitignore
 !.gitignore

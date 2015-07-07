@@ -78,6 +78,7 @@ class Service(models.Model):
 
     class Meta:
         ordering = ['title']
+        app_label = 'case_studies'
 
     @models.permalink
     def get_absolute_url(self):
@@ -95,6 +96,7 @@ class Technology(models.Model):
         ordering = ['title']
         verbose_name = "Technology"
         verbose_name_plural = "Technologies"
+        app_label = 'case_studies'
 
     @models.permalink
     def get_absolute_url(self):
@@ -132,3 +134,4 @@ class Image(File):
 
     class Meta:
         ordering = ('position',)
+        app_label = 'case_studies'

@@ -9,17 +9,17 @@ class CaseStudyForm(TendenciBaseForm):
     overview = forms.CharField(required=False,
         widget=TinyMCE(attrs={'style':'width:100%'},
         mce_attrs={'storme_app_label':CaseStudy._meta.app_label,
-        'storme_model':CaseStudy._meta.module_name.lower()}))
+        'storme_model':CaseStudy._meta.model_name.lower()}))
 
     execution = forms.CharField(required=False,
         widget=TinyMCE(attrs={'style':'width:100%'},
         mce_attrs={'storme_app_label':CaseStudy._meta.app_label,
-        'storme_model':CaseStudy._meta.module_name.lower()}))
+        'storme_model':CaseStudy._meta.model_name.lower()}))
 
     results = forms.CharField(required=False,
         widget=TinyMCE(attrs={'style':'width:100%'},
         mce_attrs={'storme_app_label':CaseStudy._meta.app_label,
-        'storme_model':CaseStudy._meta.module_name.lower()}))
+        'storme_model':CaseStudy._meta.model_name.lower()}))
 
     status_detail = forms.ChoiceField(choices=(('active','Active'),('inactive','Inactive')))
 

@@ -34,6 +34,7 @@ class CaseStudy(TendenciBaseModel):
         permissions = (("view_casestudy","Can view case study"),)
         verbose_name = 'Case Study'
         verbose_name_plural = 'Case Studies'
+        app_label = 'case_studies'
 
     def delete(self, *args, **kwargs):
         for img in self.image_set.all():

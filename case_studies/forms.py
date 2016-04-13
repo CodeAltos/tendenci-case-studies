@@ -3,7 +3,7 @@ from django import forms
 from tendenci.core.perms.forms import TendenciBaseForm
 from case_studies.models import CaseStudy, Image
 # from tendenci.core.files.models import File
-from tinymce.widgets import TinyMCE
+from tendenci.libs.tinymce.widgets import TinyMCE
 
 class CaseStudyForm(TendenciBaseForm):
     overview = forms.CharField(required=False,
